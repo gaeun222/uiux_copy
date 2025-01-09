@@ -1,0 +1,1163 @@
+/* ==== 김가은 ==== */
+/* 노말라이즈 */
+body {
+  background-color: white !important;
+}
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+ul,
+li,
+p,
+span {
+  font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 2px 0;
+}
+
+img,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+/* ==== 김태균 ==== */
+/* 노멀라이저 */
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* lib */
+.red {
+  border: 1px solid red;
+}
+.blue {
+  border: 1px solid blue;
+}
+.green {
+  border: 1px solid green;
+}
+.orange {
+  border: 1px solid orange;
+}
+
+/* custom */
+/* ==== 김태균 ==== */
+/* header 시작*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 99;
+  height: 150px;
+}
+.head_top {
+  border-bottom: 1px solid #eaeaea;
+  height: 58px;
+}
+.head_top > .conwrap {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.head_top .links {
+  overflow: hidden;
+  margin-top: 14px;
+}
+.head_top .links .lang {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  z-index: 100;
+  float: left;
+  width: 86px;
+  height: 21px;
+  padding-top: 7px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.head_top .links .lang .this_lang {
+  padding-left: 15px;
+  background: url(https://www.monami.com/images/common/lang_kor.gif) no-repeat
+    10px center;
+}
+
+.head_top .links .lang .this_lang a {
+  display: block;
+  width: 38px;
+  padding-left: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  color: #000;
+  background: url(https://www.monami.com/images/common/lang_arr.gif) no-repeat
+    right center;
+}
+.head_top .links .lang.on .this_lang a {
+  background: url(https://www.monami.com/images/common/lang_arr2.gif) no-repeat
+    right center;
+}
+.head_top .links .lang ul {
+  width: 86px;
+  margin-top: 5px;
+}
+.head_top .links .lang ul li a {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  margin-left: -2px;
+  text-align: center;
+  color: #000;
+  background: url(https://www.monami.com/images/common/lang_eng.gif) no-repeat
+    12px center;
+}
+.head_top > .conwrap .sns {
+  padding-left: 98px;
+}
+.head_top > .conwrap .sns > ul {
+  display: flex;
+  gap: 8px;
+}
+.head_top .top-menu {
+  margin-right: 30px;
+  padding-top: 20px;
+  color: #9b9a9a;
+  font-size: 11px;
+}
+.head_top .top-menu > ul {
+  display: flex;
+}
+.head_top .top-menu > ul > li > a::after {
+  content: "|";
+  padding: 0 10px;
+}
+.head_top .top-menu > ul > li:nth-child(3) > a::after {
+  display: none;
+}
+.gnb {
+  min-width: 1262px;
+  margin: 0 auto;
+  position: relative;
+  height: 89px;
+}
+.gnb > .menu {
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+}
+
+.gnb .menu-box > ul {
+  display: flex;
+  height: 100%;
+}
+.gnb .menu-box > ul > li {
+  position: relative;
+}
+.gnb .menu-box > ul > li:hover > a {
+  color: #c40f39;
+}
+.gnb .menu-box > ul > li:hover::after {
+  opacity: 1;
+}
+.gnb .menu-box > ul > li > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  white-space: nowrap;
+}
+
+.sub-menu {
+  position: absolute;
+  right: 0;
+  left: 0;
+  display: block;
+  z-index: 9999;
+  display: none;
+}
+
+.gnb .menu-box > ul > li::after {
+  content: "";
+  display: block;
+  width: 97%;
+  margin-left: 5px;
+  height: 2px;
+  background: #c40f39;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  margin-left: 5px;
+  opacity: 0;
+}
+.head .gnb .menu-box > ul ul > li {
+  border-bottom: 1px solid #e1e1e1;
+  margin-left: 5px;
+}
+.head .gnb .menu-box > ul ul > li:hover > a {
+  color: #c40f39;
+}
+.head .gnb .menu-box > ul > li > ul > li > a {
+  height: 60px;
+  line-height: 49px;
+  font-size: 14px;
+  color: #676767;
+  transition: all 0.3s;
+  padding: 0 2px;
+  display: flex;
+  justify-content: center;
+}
+.menuBg {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 1920px;
+  top: 100%;
+  left: -253px;
+  height: 480px;
+  display: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 0 #ddd inset;
+}
+
+.gnb .search {
+  display: flex;
+  padding-right: 30px;
+  align-items: center;
+}
+.gnb .search > .nav_search {
+  margin-right: 30px;
+}
+.icon {
+  float: right;
+  overflow: hidden;
+  width: 20px;
+  height: 17px;
+  cursor: pointer;
+}
+.icon > div {
+  height: 2px;
+  width: 100%;
+  margin-bottom: 5px;
+  background: #303030;
+  transition: all 0.4s;
+}
+
+.icon.openmenu > div:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.icon.openmenu > div:nth-child(2) {
+  opacity: 0;
+}
+.icon.openmenu > div:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+/* all-menu 시작*/
+.all-menu {
+  position: absolute;
+  background-color: rgb(255, 255, 255, 255);
+  width: 1920px;
+  top: 100%;
+  left: -253px;
+  height: 480px;
+  z-index: 10000;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1), 0 1px 0 #ddd inset;
+  opacity: 0;
+  visibility: hidden;
+}
+.all-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+.all-menu_in {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.all-menu-box {
+  float: left;
+  width: 12.66%;
+  padding: 50px 2%;
+  height: 380px;
+  box-shadow: -1px 0px 0px #e9e9e9 inset;
+}
+.all-menu-box h2 {
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #303030;
+  font-weight: bold;
+}
+.all-menu-box h2::after {
+  display: block;
+  content: "";
+  width: 19px;
+  height: 2px;
+  margin: 20px 0;
+  background: #c40f39;
+}
+.all-menu-box ul li {
+  margin-bottom: 15px;
+}
+.all-menu-box ul li a {
+  display: block;
+  font-size: 16px;
+  color: #6e6e6e;
+  font-weight: 400;
+}
+.all-menu-box ul li:hover > a {
+  color: #c40f39;
+}
+/* all-menu 끝 */
+/* gnb 끝  */
+
+/* section visual 시작 */
+.visual {
+  position: relative;
+  margin-top: 150px;
+}
+.visual .bgarea img {
+  width: 100%;
+}
+.visual > .textarea {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  margin-left: -640px;
+  z-index: 10;
+  padding-left: 80px;
+}
+.visual > .textarea h3 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 200;
+  padding-top: 120px;
+}
+.visual > .textarea h3::before {
+  display: block;
+  content: "";
+  width: 80px;
+  height: 1px;
+  background: #fff;
+}
+.visual > .textarea p {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* section visual 끝*/
+
+/* section new 시작 */
+
+.new > .item {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+.new .tit {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.new .tit h2 {
+  height: 90px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #000;
+  line-height: 120%;
+}
+.new .tit h2::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 15px 0 0;
+  background: #c40f39;
+}
+.new .tit p {
+  font-size: 13px;
+  color: #6e6e6e;
+  margin-top: 10px;
+}
+.new .toparea {
+  overflow: hidden;
+  margin: 80px 0 25px;
+  display: flex;
+}
+.new .box {
+  position: relative;
+}
+.new .box > a > img {
+  border-radius: 20px;
+}
+.new .box > a > .ondiv {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  text-align: center;
+  transition: all 0.6s;
+  border-radius: 24px;
+  background-color: #c40f39;
+  opacity: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new .box > a:hover > .ondiv {
+  opacity: 1;
+}
+.new .box > a:hover > .ondiv > .align > .plus {
+  transform: rotateZ(180deg);
+}
+.new .toparea .box:nth-child(1) .ondiv {
+  width: 362px;
+  height: 175px;
+}
+.new .toparea .box:nth-child(2) .ondiv {
+  width: 756px;
+  height: 330px;
+}
+.new .box .ondiv .cate {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #eec7d0;
+}
+.new .box .ondiv .name {
+  font-size: 21px;
+}
+.new .box .ondiv .plus {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 45px auto 0;
+  transition: all 0.4s 0.2s;
+}
+.new .box .ondiv .plus div:nth-child(1) {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+.new .box .ondiv .plus div:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+.new .toparea .box:nth-child(1) {
+  margin: 180px 22px 0 0;
+}
+.new .toparea .new2 {
+  margin-top: 25px;
+}
+.new .btmarea .box:nth-child(1),
+.new .btmarea .box:nth-child(2) {
+  margin: 0 22px 0 0;
+}
+.new .btmarea {
+  overflow: hidden;
+  display: flex;
+}
+.new .btmarea .box:nth-child(1) .ondiv {
+  width: 362px;
+  height: 262px;
+}
+.new .btmarea .box:nth-child(2) .ondiv {
+  width: 420px;
+  height: 409px;
+}
+.new .btmarea .box:nth-child(3) .ondiv {
+  width: 284px;
+  height: 262px;
+}
+.l-popup__buttons {
+  width: 216px;
+  height: 216px;
+  position: fixed;
+  top: 230px;
+  right: 15px;
+  text-align: center;
+  z-index: 10000;
+  border-radius: 50%;
+  background: #000;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px 35px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.l-popup__buttons > span:nth-child(2) {
+  margin-top: 8px;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: -0.055em;
+  font-weight: 300;
+}
+.l-popup__buttons .l-popup-btn-1 {
+  margin-right: 80px;
+  padding-top: 20px;
+}
+.l-popup__buttons .l-popup-btn-1 > span.btn_go {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  position: relative;
+  box-sizing: border-box;
+  position: relative;
+}
+.l-popup__buttons .l-popup-btn-1 > span.btn_go::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  background-color: gray;
+  height: 1px;
+  width: 60px;
+  display: none;
+}
+.l-popup__buttons .l-popup-btn-1 > span.btn_go:hover::before {
+  display: block;
+}
+.l-popup__buttons .l-popup-btn-1 > span.btn_go::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(https://www.monami.com/images/main/btn_go_arrrow.png)
+    no-repeat 0 0;
+  background-size: contain;
+  position: absolute;
+  left: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.l-popup__buttons .l-popup-btn-2 {
+  display: block;
+  width: 100%;
+  margin-top: 13px;
+  text-align: left;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+}
+.l-popup__buttons .l-popup-btn-2 > span.btn_inquiry {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: -0.055em;
+  font-weight: 300;
+  position: relative;
+  padding-left: 38px;
+  transition: all ease-in-out 0.3s;
+}
+.l-popup__buttons .l-popup-btn-2 > span.btn_inquiry::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 80%;
+  background-color: gray;
+  height: 1px;
+  width: 90px;
+  display: none;
+}
+.l-popup__buttons .l-popup-btn-2 > span.btn_inquiry:hover::before {
+  display: block;
+}
+.l-popup__buttons .l-popup-btn-2 > span.btn_inquiry::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(https://www.monami.com/images/main/btn_inquiry_icon.png)
+    no-repeat 0 0;
+  background-size: contain;
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.l-popup__button--close {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(https://www.monami.com/images/main/l-popup__button_close.png)
+    no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* ==== 김가은 ==== */
+/* --- BEST PRODUCT --- */
+.best {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  padding: 60px 0;
+  text-align: center;
+}
+.best > .best-box > .best-text > .tittle {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.best > .best-box > .best-text > .tittle::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 10px auto;
+  background: #c40f39;
+}
+
+.best > .best-box > .best-text .text {
+  color: #555;
+}
+
+.best > .best-box > .best-text > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.best > .best-box > .best-text > ul > li {
+  margin: 25px 2px;
+  border-radius: 50px;
+}
+
+.best > .best-box > .best-text > ul > li > a {
+  border: 2px solid #898989;
+  border-radius: 50px;
+  color: #898989;
+  display: block;
+  text-align: center;
+  width: 153px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.best > .best-box > .best-text > ul > li:hover > a {
+  border: 2px solid #c40f39;
+  border-radius: 50px;
+  color: #c40f39;
+}
+
+.tab__content {
+  display: none;
+}
+.tab__content.active {
+  display: block;
+}
+
+/* 스와이퍼 */
+html,
+body {
+  position: relative;
+}
+
+body {
+  background: #eee;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide a {
+  display: block;
+  height: 100%;
+  border-radius: 0;
+  margin: 0 10px;
+  background-color: white;
+}
+
+.swiper-slide a .thum img {
+  width: 100%;
+  height: 400px;
+  border-radius: 18px;
+  margin-bottom: 40px;
+}
+
+.swiper-slide a .info {
+  text-align: left;
+  font-family: "Montserrat";
+  padding: 0 20px 40px;
+}
+
+.swiper-slide a .info > .small {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #b3b3b3;
+}
+.swiper-slide a .info > .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.info-1 {
+  text-align: left;
+  font-family: "Montserrat";
+  padding: 0 20px 15px;
+}
+.swiper-slide a .info-1 > .small {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #b3b3b3;
+}
+.swiper-slide a .info-1 > .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.best_info {
+  margin-top: 60px;
+  width: 100%;
+  border-top: 1px dotted #ccc;
+}
+.best_info .wrap {
+  width: 850px;
+  margin: 0 auto;
+  position: relative;
+}
+.best_info .wrap .arr1 {
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.best_info .wrap .arr2 {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.best_info .wrap .d_s {
+  width: 100px;
+  margin: 0 auto;
+  margin-top: -20px;
+  background: #eee;
+  font-size: 12px;
+}
+.best_info .wrap .d_s div {
+  margin-bottom: 25px;
+}
+
+/* --- VIDEO --- */
+.video {
+  width: 100%;
+}
+.video > video {
+  width: 100%;
+}
+
+/* --- NEWS --- */
+.news {
+  width: 100%;
+  height: 355px;
+  display: flex;
+  justify-content: center;
+}
+
+.news > .news_contianer {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.news > .news_container > .monami-news-box {
+  width: 650px;
+  height: 310px;
+  padding: 0 50px;
+  padding-top: 45px;
+  border-right: 1px solid #ddd;
+}
+
+/* news-tit */
+.news > .news_container > .monami-news-box > .news-tit {
+  display: flex;
+  justify-content: space-between;
+}
+.news > .news_container > .monami-news-box > .news-tit > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  line-height: 120%;
+}
+.news > .news_container > .monami-news-box > .news-tit > h2::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 10px 0;
+  background: #c40f39;
+}
+.news > .news_container > .monami-news-box > .news-tit > a {
+  color: #3d3e38;
+  font-size: 11px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+/* news-list */
+.news > .news_container > .monami-news-box > .news-list {
+  padding: 0;
+}
+.news > .news_container > .monami-news-box > .news-list > .news-list-top {
+  display: flex;
+  overflow: hidden;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 15px;
+}
+.news-list > .news-list-top > .news-img {
+  margin-bottom: 15px;
+}
+
+.news > .news_container > .monami-news-box > .news-list > li {
+  display: flex;
+  justify-content: space-between;
+}
+.news > .news_container > .monami-news-box > .news-list .news-list-top_text {
+  margin-left: 30px;
+}
+.news
+  > .news_container
+  > .monami-news-box
+  > .news-list
+  .news-list-top_text
+  div {
+  font-size: 21px;
+  color: #000;
+  margin-bottom: 5px;
+}
+.news > .news_container > .monami-news-box > .news-list .news-list-top_text p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* inquiry */
+.inquiry_con {
+  width: 349px;
+  height: 355px;
+  background: url(https://www.monami.com/images/main/inquiry_bg.jpg) no-repeat;
+  border-right: 1px solid #ddd;
+  text-align: center;
+}
+.inquiry_con > .inquiry-tit {
+  margin: 65px 0 0;
+  padding-top: 75px;
+  background: url(https://www.monami.com/images/main/inquiry_tit_bg.png)
+    no-repeat center 2px;
+}
+.inquiry_con > .inquiry-tit::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 10px auto;
+  background: #c40f39;
+}
+.inquiry_con > .inquiry-tit > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  line-height: 120%;
+}
+.inquiry_con > p {
+  color: #6a6a6a;
+  line-height: 160%;
+  margin-bottom: 45px;
+}
+.inquiry_con > a {
+  display: block;
+  width: 167px;
+  height: 35px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 35px;
+  font-family: "Montserrat", sans-serif;
+  color: #c40f39;
+  font-weight: 500;
+  border: 2px solid #c40f39;
+  transition: all 0.6s;
+  border-radius: 50px;
+}
+.inquiry_con > a:hover {
+  background-color: #c40f39;
+  color: white;
+}
+
+/* store */
+.store {
+  width: 349px;
+  height: 355px;
+  background: url(https://www.monami.com/images/main/shop_bg.png) no-repeat;
+  border-right: 1px solid #ddd;
+  text-align: center;
+}
+.store > .store-tit {
+  margin: 65px 0 0;
+  padding-top: 75px;
+  background: url(https://www.monami.com/images/main/shop_tit_bg.png) no-repeat
+    center 2px;
+}
+.store > .store-tit > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  line-height: 120%;
+}
+.store > .store-tit > h2::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 10px auto;
+  background: #c40f39;
+}
+.store > p {
+  color: #6a6a6a;
+  line-height: 160%;
+  margin-bottom: 45px;
+}
+.store > a {
+  display: block;
+  width: 167px;
+  height: 35px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 35px;
+  font-family: "Montserrat", sans-serif;
+  color: #c40f39;
+  font-weight: 500;
+  border: 2px solid #c40f39;
+  transition: all 0.6s;
+  border-radius: 50px;
+}
+.store > a:hover {
+  background-color: #c40f39;
+  color: white;
+}
+
+/* ==== 최진영 ==== */
+/* 푸터 */
+.sub-footer {
+  background-color: #111;
+  padding: 60px 0 65px;
+}
+.sub-footer > .sub-footer-con {
+  max-width: 1400px;
+  width: 94%;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+/* 푸터탑 */
+.sub-footer > .sub-footer-con > .footer-top {
+  display: flex;
+  width: 100%;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-top > .footer-logo {
+  display: flex;
+  justify-content: flex-start;
+}
+.flex-grow-1 {
+  display: flex;
+  flex-grow: 1;
+}
+.footer-top > ul {
+  display: flex;
+  align-items: center;
+}
+.footer-top > ul > li > .bar {
+  padding-right: 11px;
+  margin-right: 10px;
+  background-image: url(https://www.monami.com/images/common/fm_bar.gif);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.footer-top > ul > li > a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+.footer-top > ul > li > .privacy {
+  color: #fff;
+}
+/* 푸터바텀 */
+.sub-footer > .sub-footer-con > .footer-bottom {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+}
+.footer-bottom > .footer-info {
+  margin-right: 55px;
+}
+.footer-bottom > .footer-info > .footer-info_title {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-bottom > .footer-info > .info-ad {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-bottom > .footer-info > .info-ad > span {
+  display: inline-block;
+  padding: 0 10px;
+}
+.footer-bottom > .footer-info > p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 4px 0;
+}
+.footer-service > .service-title {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.footer-service > .service-number {
+  color: #fff;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-service > a {
+  color: #dfdfdf;
+  width: 155px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+  border: 1px solid #878787;
+  background-color: #4a4a4a;
+  border-radius: 6px;
+  gap: 5px;
+}
+.footer-service > a > img {
+  /* 	border: 1px solid red; */
+  transform: rotate(-90deg);
+}
+.family-site {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 242px;
+  height: 34px;
+  text-align: left;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.family-site > .family-site__txt {
+  display: block;
+  padding: 0 13px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.family-site > .family-site__txt > img {
+  display: block;
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.family-site > ul {
+  /* 	display: none; */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 0;
+  position: absolute;
+  left: -1px;
+  bottom: 100%;
+  width: 242px;
+  border-radius: 5px 5px 0 0;
+  background-color: #000;
+}
+.family-site > ul > li > a {
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  height: 34px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom .family-site.on {
+  border-radius: initial;
+  border-radius: 0 0 5px 5px;
+}
+.footer-bottom .family-site.hover > ul {
+  display: block;
+}
+.footer-bottom .family-site.rotate img {
+  transform: rotate(0deg);
+}
